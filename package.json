@@ -1,6 +1,6 @@
 {
   "name": "apiway-report",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "A Gorgeous HTML/CSS Reporter for Mocha.js",
   "scripts": {
     "lint": "eslint src test",
@@ -59,7 +59,7 @@
     "diff": "^3.0.0",
     "json-stringify-safe": "^5.0.1",
     "lodash": "^4.17.3",
-    "mochawesome-report-generator": "^2.0.2",
+    "apiway-report-generator": "latest",
     "uuid": "^3.0.1"
   },
   "peerDependencies": {

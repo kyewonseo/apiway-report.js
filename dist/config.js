@@ -6,9 +6,9 @@ var _assign2 = _interopRequireDefault(_assign);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var marge = require('mochawesome-report-generator');
+var marge = require('apiway-report-generator');
 
-// Grab shared base config from mochawesome-report-generator
+// Grab shared base config from apiway-report-generator
 var baseConfig = (0, _assign2.default)(marge.getBaseConfig(), {
   reportFilename: 'mochawesome',
   saveJson: true

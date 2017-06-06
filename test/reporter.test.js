@@ -14,7 +14,7 @@ const logStub = sinon.stub();
 utils.log = logStub;
 
 const config = proxyquire('../src/config', {
-  'mochawesome-report-generator': {
+  'apiway-report-generator': {
     getBaseConfig: () => ({
       reportDir: 'mochawesome-report',
       reportTitle: process.cwd().split(path.sep).pop(),
@@ -35,7 +35,7 @@ const config = proxyquire('../src/config', {
 });
 
 const mochawesome = proxyquire('../src/mochawesome', {
-  'mochawesome-report-generator': {
+  'apiway-report-generator': {
     create: reportStub
   },
   './config': config,
