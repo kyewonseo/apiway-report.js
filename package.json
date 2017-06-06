@@ -1,6 +1,6 @@
 {
-  "name": "mochawesome",
-  "version": "2.2.0",
+  "name": "apiway-report",
+  "version": "0.0.2",
   "description": "A Gorgeous HTML/CSS Reporter for Mocha.js",
   "scripts": {
     "lint": "eslint src test",
@@ -11,17 +11,20 @@
     "test:ctx": "mocha test-functional/test-context.js --opts test-functional/mocha.opts",
     "build": "babel src -d dist"
   },
-  "author": "Adam Gruber",
+  "author": "bluehackmaster<master@bluehack.net>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adamgruber/mochawesome"
+    "url": "https://github.com/apiway/apiway-report"
   },
   "keywords": [
     "mocha",
     "reporter",
     "json",
-    "html"
+    "html",
+    "apiway",
+    "tdd",
+    "unit test"
   ],
   "engine": "node >= 4",
   "main": "dist/mochawesome.js",
