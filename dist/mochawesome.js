@@ -10,7 +10,7 @@ var mocha = require('mocha');
 var uuid = require('uuid');
 var stringify = require('json-stringify-safe');
 var conf = require('./config');
-var marge = require('mochawesome-report-generator');
+var marge = require('apiway-report-generator');
 var utils = require('./utils');
 
 // Import the utility functions

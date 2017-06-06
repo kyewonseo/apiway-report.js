@@ -1,6 +1,6 @@
-const marge = require('mochawesome-report-generator');
+const marge = require('apiway-report-generator');
 
-// Grab shared base config from mochawesome-report-generator
+// Grab shared base config from apiway-report-generator
 const baseConfig = Object.assign(marge.getBaseConfig(), {
   reportFilename: 'mochawesome',
   saveJson: true
