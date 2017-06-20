@@ -4,6 +4,9 @@ const stringify = require('json-stringify-safe');
 const conf = require('./config');
 const marge = require('apiway-report-generator');
 const utils = require('./utils');
+var server = require('./server');
+var http = require("http");
+http.post = require('http-post');
 
 // Import the utility functions
 const {
@@ -28,11 +31,21 @@ const totalTestsRegistered = { total: 0 };
  * @return {Promise} Resolves with successful report creation
  */
 
+console.log('test########################################');
+server.start();
+/**
+ * 위의 console.log와 server.start() 함수는 실행이 됩니다.
+ * */
+
 function done(output, config, failures, exit) {
   return marge.create(output, config)
     .then(([ htmlFile, jsonFile ]) => {
-      log(`Report JSON saved to ${jsonFile}`, null, config);
-      log(`Report HTML saved to ${htmlFile}`, null, config);
+
+      log(`#####Report JSON saved to ${jsonFile}`, null, config);
+      log(`#####Report HTML saved to ${htmlFile}`, null, config);
+      /**
+       * 여기 안에 코드를 추가해도 추가한 코드가 실행이 안됩니다.
+       * */
     })
     .catch(err => {
       log(err, 'error', config);
@@ -130,6 +143,7 @@ function Mochawesome(runner, options) {
         obj.stats.passPercentClass = getPercentClass(passPercentage);
         obj.stats.pendingPercentClass = getPercentClass(pendingPercentage);
 
+        console.log('test########################################2');
         // Save the final output to be used in the done function
         this.output = stringify(obj, null, 2);
       }
